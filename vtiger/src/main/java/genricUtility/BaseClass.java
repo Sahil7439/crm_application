@@ -24,16 +24,7 @@ import objectRepo.HomePage;
 import objectRepo.LoginPage;
 
 public class BaseClass {
-//	public WebDriver driver;
-//	public static WebDriver sDriver;
-//	public WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-//	public FileUtility fu = new FileUtility();
-//	public JavaUtility ju = new JavaUtility();
-//	public HomePage hp = new HomePage(driver);
-//	public CreateOrg creOrg = new CreateOrg(driver);
-//	public CreateContact con = new CreateContact(driver);
 
-//	ChatGPT
 	public WebDriver driver;
 	public static WebDriver sDriver;
 	public FileUtility fu = new FileUtility();
@@ -106,7 +97,7 @@ public class BaseClass {
 	@AfterMethod
 	public void ConfigAM() {
 		Reporter.log("--------LogOut", true);
-		HomePage hp = new HomePage(driver);
+		hp = new HomePage(driver);
 		hp.logoutMethod(driver);
 	}
 
