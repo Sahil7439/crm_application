@@ -7,4 +7,8 @@ public class JavaUtility {
 		Random random = new Random();
 		return random.nextInt(1000);
 	}
+	
+	public static int genrateRanNum() {
+		return (int)(Math.random()*1000);
+	}
 }
