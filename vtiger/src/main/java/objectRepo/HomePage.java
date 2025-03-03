@@ -29,20 +29,20 @@ public class HomePage {
 	}
 
 //	For Logout
-	@FindBy(xpath = "//img[@src='themes/softed/images/user.PNG']")
+	@FindBy(xpath = "//span[@class='userName']/../following-sibling::td[@class='small']/img")
 	public WebElement personImgLink;
 
 	public WebElement getPersonImglink() {
 		return personImgLink;
 	}
-	
+
 	@FindBy(linkText = "Sign Out")
 	public WebElement logoutLink;
-	
+
 	public WebElement getLogoutLink() {
 		return logoutLink;
 	}
-	
+
 	public void logoutMethod(WebDriver driver) {
 		Actions act = new Actions(driver);
 		act.moveToElement(getPersonImglink()).build().perform();

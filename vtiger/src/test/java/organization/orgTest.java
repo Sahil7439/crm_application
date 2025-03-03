@@ -10,8 +10,8 @@ import genricUtility.BaseClass;
 
 public class orgTest extends BaseClass {
 	static String exPath = "C:\\automation\\src\\test\\resources\\vtiger.xlsx";
-
-	@Test(groups = "Functionality Test")
+	
+	@Test(groups = "st")
 	public void CreateOrgNameTest() throws InterruptedException, IOException {
 //		Accessing Data from Excel File
 		String orgName = fu.getDatafromExcelFile(exPath, "orgTestData", 1, 0);
@@ -25,7 +25,7 @@ public class orgTest extends BaseClass {
 		creOrg.getSaveBtn().click();
 	}
 
-	@Test(groups = "Regression Test")
+	@Test(groups = "rt")
 	public void orgNameWithIndustryTest() throws IOException {
 		String orgName = fu.getDatafromExcelFile(exPath, "OrgTestData", 1, 0);
 		String indName = fu.getDatafromExcelFile(exPath, "OrgTestData", 1, 2);
@@ -42,7 +42,7 @@ public class orgTest extends BaseClass {
 		creOrg.getSaveBtn().click();
 	}
 
-	@Test(groups = "Smoke Test")
+	@Test(groups = "rt")
 	public void orgNameIndPhNum() throws IOException {
 		String orgName = fu.getDatafromExcelFile(exPath, "orgTestData", 1, 0);
 		String indName = fu.getDatafromExcelFile(exPath, "orgTestData", 1, 2);
